@@ -62,8 +62,10 @@ def recommend(movie):
 
 
 # Load the movies DataFrame from a CSV file
-movies = pd.read_csv(r"C:\Users\adity\Desktop\PROJECT\recomm\movies_list.csv")
-similarity = pickle.load(open(r"C:\Users\adity\Desktop\PROJECT\recomm\similar.pkl", "rb"))
+# movies = pd.read_csv(r"C:\Users\adity\Desktop\PROJECT\recomm\movies_list.csv")
+movies = pd.read_csv("movies_list.csv")
+# similarity = pickle.load(open(r"C:\Users\adity\Desktop\PROJECT\recomm\similar.pkl", "rb"))
+similarity = pickle.load(open("similar.pkl", "rb"))
 st.title("Movie Recommender System")
 
 selected_movie = st.selectbox(
